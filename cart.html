@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact Page</title>
+</head>
+<style>
+
+body, html{
+    height: 100%;
+}
+
+*{
+  
+    box-sizing: border-box;
+}
+/* navbar */
+.mid {
+ display: block;
+text-align: left;
+font-size: 17px;
+background-color: orange;
+color: black;
+padding: 10px;
+text-decoration: none;
+height: 60px;
+border-radius: 10px;
+border-color: rgb(249, 134, 2);
+border-style: solid;
+ 
+
+}
+
+.mid a {
+    float: left;
+    text-decoration: none;
+    padding: 7px;
+    font-size: 20px;
+    color: black;
+    margin-left: 20px;
+
+}
+
+.mid a:hover {
+    background-color: brown;
+    color: aliceblue;
+}
+
+#logo{
+    float: left;
+    position: relative;
+    margin: 0px 25px 10px 15px;
+
+
+}  
+#logo:hover{
+    background-color: green;
+    cursor: progress;
+}
+/* 
+.active {
+    background-color: cadetblue;
+} */
+
+.btn-r {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    display: inline-block;
+    border: white;
+    color: white;
+    margin: 0px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: green;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:serif;
+}
+.btn-r:hover{
+    background-color: maroon;
+
+}
+
+.btn-l {
+    position: absolute;
+    right: 120px;
+    top: 20px;
+    display: inline-block;
+    border: white;
+    color: white;
+    margin: 0px;
+    padding: 8px;
+    font-size: 18px;
+    background-color:green;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:serif;
+    }
+.btn-l:hover{
+    background-color: maroon;
+}
+.product-image{
+position:relative;
+}
+.product{
+display: flex;
+}
+.totals{
+margin-left: 1200px;
+}
+.product-details{
+  text-align: center;
+  font-size:larger;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .card{
+      width: 300%;
+        display:ms-grid;
+        margin-bottom: 20px;
+    }
+    .mid a{
+      float: left;
+      display:contents;
+      font-size: 11px;
+    }
+    
+    .btn-l {
+      display: none;
+    }
+    .btn-r{
+      display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+   .footer {
+    /* position: fixed; */
+    left: 0;
+    padding-top: 2px;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: orange;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+</style>
+
+
+
+
+<!-- HTML CODE -->
+
+<body>
+    
+    <header>
+        <!-- midlle container for navbar-->
+        <div class="mid" id="navbar">
+      
+           <div id = "logo" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRXLBpLmX7wlnrHk_1wMQBu_F8KXCQ0Usg8Q&usqp=CAU " alt ="..." height ="42px" width="70px" ></div>
+      
+          <a href="Home.html">Home</a>
+          <a href="contact.html">Contact</a>
+          <a href="cuisine.html">Cuisine</a>
+          <a href="m-f.html">Meat & SeaFood</a>
+          <a href="h-d.html">Healthy & Diet</a>
+          <img src="https://t3.ftcdn.net/jpg/02/72/72/00/360_F_272720049_44KtuETcizxjMKqlueD5VunTZkILanqV.jpg" alt="" height ="42px" width="70px" >
+          <a href="cart.html" >Cart </a>
+       
+          <!-- right-side button logo -->
+
+          <button class="btn-r">Call us📞</button>
+          <button class="btn-l">  EmailⓂ️ </button>
+          </div>
+          
+         </header>
+
+         <h1 style="text-align: center; margin: 40px;">Shopping Cart</h1>
+
+         <div class="shopping-cart">
+         
+           <div class="column-labels">
+             <label class="product-image">Image</label>
+             <label class="product-details">Product</label>
+             <label class="product-price">Price</label>
+             <label class="product-quantity">Quantity</label>
+             <label class="product-removal">Remove</label>
+             <label class="product-line-price">Total</label>
+           </div>
+         
+           <div class="product">
+             <div class="product-image">
+               <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=600 ">
+             </div>
+             <div class="product-details">
+               <div class="product-title">Dingo Dog Bones</div>
+               <p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
+             </div>
+             <div class="product-price">12.99</div>
+             <div class="product-quantity">
+               <input type="number" value="2" min="1">
+             </div>
+             <div class="product-removal">
+               <button class="remove-product">
+                 Remove
+               </button>
+             </div>
+             <div class="product-line-price">25.98</div>
+           </div>
+         
+           <div class="product">
+             <div class="product-image">
+               <img src="https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600">
+             </div>
+             <div class="product-details">
+               <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
+               <p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
+             </div>
+             <div class="product-price">45.99</div>
+             <div class="product-quantity">
+               <input type="number" value="1" min="1">
+             </div>
+             <div class="product-removal">
+               <button class="remove-product">
+                 Remove
+               </button>
+             </div>
+             <div class="product-line-price">45.99</div>
+           </div>
+         
+           <div class="totals">
+             <div class="totals-item">
+               <label>Subtotal</label>
+               <div class="totals-value" id="cart-subtotal">71.97</div>
+             </div>
+             <div class="totals-item">
+               <label>Tax (5%)</label>
+               <div class="totals-value" id="cart-tax">3.60</div>
+             </div>
+             <div class="totals-item">
+               <label>Shipping</label>
+               <div class="totals-value" id="cart-shipping">15.00</div>
+             </div>
+             <div class="totals-item totals-item-total">
+               <label>Grand Total</label>
+               <div class="totals-value" id="cart-total">90.57</div>
+             </div>
+           </div>
+               
+               <button class="checkout">Checkout</button>
+         
+         </div>
+  
+    
+    <div class="footer">
+        <p>| footer |</p>
+    </div>
+</body>
+</html>
+
+
+
+
+</body>
+</html>

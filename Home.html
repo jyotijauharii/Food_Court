@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOOD court</title>
+  <script src="J.js"></script>
+  <link rel="stylesheet" href="C.css">
+</head>
+<style>
+
+  
+body,
+html {
+    height: 100%;
+   
+}
+
+* {
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+.bg-image {
+    
+   
+    background-image: url("https://images.pexels.com/photos/2103949/pexels-photo-2103949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    border-color: black;
+    /* filter: blur(2px); */
+    /* opacity: 100px; */
+
+}
+
+.bg-text {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 2; */
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+ 
+}
+.bg-text:hover{
+    box-shadow: 0 8px 16px 0
+    black;
+}
+
+input[type=text] {
+    color: black;
+    width: 250px;
+    height: 30px;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+.mid {
+
+    display: block;
+    text-align: left;
+    font-size: 17px;
+    background-color: orange;
+    color: black;
+    padding: 11px;
+    text-decoration: none;
+    height: 30px;
+    border-radius: 10px;
+    border-color: rgb(249, 134, 2);
+    border-style: solid;
+}
+
+.mid a {
+    float: left;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 20px;
+    color: black;
+    margin-left: 20px;
+}
+
+/* @media screen and (max-width: 767px) {
+  .mid {
+    display: block;
+  }
+} */
+
+.mid a:hover {
+    background-color: brown;
+    color: aliceblue;
+}
+
+#logo {
+    float: left;
+    position: relative;
+    margin: 0px 25px 10px 15px;
+   
+}
+
+#logo:hover {
+    background-color: green;
+    cursor: progress;
+}
+
+
+/* .active {
+    background-color: cadetblue;
+} */
+
+.btn-r {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    display: inline-block;
+    border: white;
+    color: white;
+    margin: 0px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: green;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:serif;
+}
+
+.btn-r:hover {
+    background-color: maroon;
+
+}
+
+.btn-l {
+    position: absolute;
+    right: 120px;
+    top: 20px;
+    display: inline-block;
+    border: white;
+    color: white;
+    margin: 0px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: green;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:serif;
+}
+
+.btn-l:hover {
+    background-color: maroon;
+}
+
+#column {
+  width: 30%;
+  padding: 0 12px;
+  float: left;
+}
+.row {
+  margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+ /* display: table; */
+  clear: both;
+}
+/* // img{
+//   width:100%
+// } */
+.card {
+  padding: 5px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  text-align: left;
+  background-color: whitesmoke;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.card:hover{
+  box-shadow: 0 10px 16px 0
+  rgba(0,0,0,0.5) ;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0
+  green;
+}
+.btn {
+  padding: 7px;
+  margin-inline: 10px;
+  color: black;
+  background-color: orange;
+  text-align: center;
+  cursor: pointer;
+  width: 25%;
+  font-size: 18px;
+  display: inline-block;
+  /* //  display: flex;  */
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: khaki;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+      width: 100%;
+      display: flex;
+      margin-bottom: 20px;
+  }
+  .card{
+    width: 200%;
+     display: ms-grid;
+      /* // display:flex; */
+      display:block;
+      margin-bottom: 20px;
+      margin-left: 20px;
+
+  }
+  .card:hover{
+    box-shadow: 0 10px 16px 0
+  rgba(0,0,0,0.5) ;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0
+  green;
+
+  }
+  img{
+    width:60%
+  }
+
+  .btn {
+    padding: 7px;
+    margin-inline: 10px;
+    color: black;
+    background-color: orange;
+    text-align: center;
+    cursor: pointer;
+    width: 25%;
+    font-size: 18px;
+    display: inline-block;
+    /* display: block; */
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: khaki;
+}
+    .mid a{
+      float: left;
+      display:contents;
+      font-size: 11px;
+    }
+  .btn-l {
+    display: none;
+    }
+    .btn-r{
+      display: none;
+    }
+  
+
+  }
+
+
+
+.btn {
+    padding: 7px;
+    margin-inline: 10px;
+    color: black;
+    background-color: orange;
+    text-align: center;
+    cursor: pointer;
+    width: 25%;
+    font-size: 18px;
+    display: inline-block;
+    /* display: block; */
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: khaki;
+}
+
+
+#para {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* border: 4px solid orange;
+    border-radius: 10px; */
+}
+/* Show the dropdown menu on hover 
+ .dropdown:hover .dropdown-content {
+    display: block;
+  }  */
+
+.footer {
+
+    left: 0;
+    padding-top: 2px;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: orange;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+</style>
+
+
+
+
+<body>
+  <header>
+    <!-- midlle container for navbar-->
+    <div class="mid" id="navbar">
+
+      <!-- <a href ="javascript:void(0)" class ="closebtn"
+       onclick ="closeNav()">&times;</a> -->
+
+      <div id="logo"><img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRXLBpLmX7wlnrHk_1wMQBu_F8KXCQ0Usg8Q&usqp=CAU "
+          alt="..." height="42px" width="70px"></div>
+
+      <a href="index.html">Home ⌂</a>
+      <a href="contact.html">Contact</a>
+      <a href="cuisine.html">Cuisine</a>
+      <a href="m-f.html">Meat & SeaFood</a>
+      <a href="h-d.html">Healthy & Diet</a>
+
+      <button class="btn-r"> Call us📞</button>
+      <button class="btn-l"> EmailⓂ️ </button>
+    </div>
+
+    <!-- <span  onclick="openNav()">open</span> -->
+</header>
+ <div class="bg-image"></div>
+  <div class="bg-text">
+    <h1 style="  font-style: italic " ;>Discover the best food & drinks near your city</h1>
+    <h2 style="  font-style: italic " ;>Be Foodie</h2>
+    <input type="text" name="Search" placeholder="Search for cuisine or retaurant.....">
+  </div><br>
+
+  <div id="para">
+    <h2 style="font-family: serif;"> Healthy Food = Happy Food; Happy Food = Happy Body; Happy Body = Happy Mind. 😊🙏
+    </h2>
+    <h3>Pick your fav... one to many</h3>
+  </div>
+  <div class="row">
+    <div id="column">
+      <div class="card">
+        <h3>South_Indian Food</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpyMRdumo0QjuImg68bT5eNBLtqOR2UBc44Q&usqp=CAU">
+        <p>$ 999.00</p>
+        <div>
+          <a href="#" class="btn">Add to cart</a>
+          <a href="https://10619-2.s.cdn12.com/m6/menu-Mahalaxmi-South-Indian-Food.jpg" class="btn">View Menu</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="column">
+      <div class="card">
+        <h3>Chinese Food</h3>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNQzJAcMczyP1__ki_v1jkl2y0JgTrTg-fXIQTzI_t0McJoejg548PwAa2UWKa4XvEGyw&usqp=CAU">
+        <p>$ 999.00</p>
+        <div>
+          <a href="#" class="btn">Add to cart</a>
+          <a href="https://images.happycow.net/venues/1024/22/83/hcmp228346_1078439.jpeg" class="btn">View Menu</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="column">
+      <div class="card">
+        <h3>Italian Food</h3>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3QT4p6MQbXrti1Kxpn86IHsE7S5t06heJ8nCqmWqLqdQEVajuA785s7Q7U8qs_FGrKZE&usqp=CAU">
+        <p>$ 999.00</p>
+        <div>
+          <a href="#" class="btn">Add to cart</a>
+          <a href="https://b.zmtcdn.com/data/menus/418/18933418/ee945c5428a5307e268f9045cff4a2fe.jpg " class="btn">View
+            Menu</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="column">
+      <div class="card">
+        <h3>Indian Food</h3>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqxaDoHSLs06Ra0diEGpDNZh-Xsf9yku3s0g&usqp=CA">
+        <p>$ 999.00</p>
+        <div>
+          <a href="#" class="btn">Add to cart</a>
+          <a href="https://cdn5.vectorstock.com/i/1000x1000/59/39/indian-cuisine-menu-with-national-dishes-vector-21985939.jpg"
+            class="btn">View Menu</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="column">
+      <div class="card">
+        <h3>Gujrati Food</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbU2gF5Rp-Ei3ZItl9mVUW_iYKFFG91ZadoA&usqp=CAU">
+        <p>$ 999.00</p>
+        <div>
+          <a href="#" class="btn">Add to cart</a>
+          <a href="https://b.zmtcdn.com/data/menus/427/18664427/3fc2b82fee72ce307cf297c89c3b3ffe.jpg" class="btn">View
+            Menu</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="column">
+      <div class="card">
+        <h3>Panjabi Food</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShytSU65XGPM0FFRpnGpHKMCls5DLlVIpQbA&usqp=CAU">
+        <p>$ 999.00</p>
+        <div>
+          <a href="#" class="btn">Add to cart</a>
+          <a href="https://img4.nbstatic.in/tr:w-700/5b7aa5cc52faff000cb2a2b5.jpg" class="btn">View Menu</a>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="footer">
+    <p>| footer |</p>
+  </div>
+
+
+</body>
+
+</html>
